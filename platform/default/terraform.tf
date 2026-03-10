@@ -22,12 +22,12 @@ terraform {
 }
 
 provider "alz" {
-  library_overwrite_enabled = true
-  library_references = [
-    {
-      custom_url = "${path.root}/lib"
-    }
-  ]
+  library_overwrite_enabled = false
+  # library_references = [
+  #   {
+  #     custom_url = "${path.root}/lib"
+  #   }
+  # ]
 }
 
 provider "azapi" {
