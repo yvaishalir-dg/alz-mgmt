@@ -28,6 +28,7 @@ provider "alz" {
   #     custom_url = "${path.root}/lib"
   #   }
   # ]
+
 }
 
 provider "azapi" {
