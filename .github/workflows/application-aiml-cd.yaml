@@ -43,4 +43,5 @@ jobs:
     with:
       terraform_action: ${{ inputs.terraform_action }}
       root_module_folder_relative_path: ${{ inputs.root_module_folder_relative_path || './applications/ai-ml' }}
+
       terraform_cli_version: ${{ inputs.terraform_cli_version }} 
