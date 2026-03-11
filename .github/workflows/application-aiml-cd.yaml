@@ -25,12 +25,12 @@ on:
       root_module_folder_relative_path:
         description: 'Relative path of Terraform scripts to be executed'
         required: true
-        default: './application/ai-ml'
+        default: './applications/ai-ml'
         type: string
 
       state_file_path:
         description: 'Full path of terraform state file'
-        default: 'application/ai-ml/terraform.tfstate'
+        default: 'applications/ai-ml/terraform.tfstate'
         type: string
 
 jobs:
