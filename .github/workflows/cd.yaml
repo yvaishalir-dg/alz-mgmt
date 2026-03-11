@@ -43,3 +43,4 @@ jobs:
       terraform_action: ${{ inputs.terraform_action }}
       root_module_folder_relative_path: ${{ inputs.root_module_folder_relative_path || './platform/default'}}
       terraform_cli_version: ${{ inputs.terraform_cli_version }}
+      

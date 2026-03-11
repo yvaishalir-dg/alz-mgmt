@@ -13,11 +13,11 @@ terraform {
   }
 
   # Remote state backend
-  backend "azurerm" {
-    # resource_group_name  = "rg-terraform-state"      # Update to your state RG
-    # storage_account_name = "sttfstate"               # Update to your state SA
-    # container_name       = "tfstate"
-    # key                  = "applications/aiml/terraform.tfstate"
+    backend "azurerm" {
+    resource_group_name  = "rg-alz-mgmt-state-eastus-001"
+    storage_account_name = "stoalzmgmeas001lllk"
+    container_name       = "mgmt-tfstate"
+    key                  = "applications/ai-ml/terraform.tfstate"
   }
 }
 
