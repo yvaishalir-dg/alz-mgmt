@@ -93,7 +93,7 @@ module "aiml_landing_zone" {
   # ── GenAI Key Vault — Created by Landing Zone ──────────────────────────────
   # This will be used as BYOR for AI Foundry
   genai_key_vault_definition = {
-    name                          = "kv-aiml-${var.environment}-${substr(var.location_short, 0, 3)}"
+    name                          = "kv-aiml-${var.environment}-${substr(var.location_short, 0, 3)}-dg"
     public_network_access_enabled = false
 
     network_acls = {
@@ -107,7 +107,7 @@ module "aiml_landing_zone" {
   # ── GenAI Storage Account — Created by Landing Zone ────────────────────────
   # This will be used as BYOR for AI Foundry
   genai_storage_account_definition = {
-    name                      = "staiml${var.environment}${var.location_short}"
+    name                      = "staiml${var.environment}${var.location_short}-dg"
     shared_access_key_enabled = true
 
     endpoints = {
@@ -279,7 +279,7 @@ module "aiml_landing_zone" {
 
   # ── Container Registry (for GenAI apps) ────────────────────────────────────
   genai_container_registry_definition = {
-    name                       = "acr${var.workload_name}${var.environment}${var.location_short}"
+    name                       = "acr${var.workload_name}${var.environment}${var.location_short}-dg"
     enable_diagnostic_settings = true
   }
   
