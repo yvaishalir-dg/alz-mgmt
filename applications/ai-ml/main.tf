@@ -94,6 +94,7 @@ module "aiml_landing_zone" {
   # This will be used as BYOR for AI Foundry
   genai_key_vault_definition = {
     name                          = "kv-aiml-${var.environment}-${substr(var.location_short, 0, 3)}datagrokr"
+
     public_network_access_enabled = false
 
     network_acls = {
