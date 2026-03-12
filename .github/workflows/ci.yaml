@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - main
+    paths:                         
+      - 'platform/default/**'
+      - '.github/workflows/**'
   workflow_dispatch:
     inputs:
       terraform_cli_version:

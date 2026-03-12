@@ -3,7 +3,10 @@ name: 02 Azure Landing Zones Continuous Delivery
 on:
   push:
     branches:
-      - main
+      - main 
+    paths:                          
+      - 'platform/default/**'               
+      - '.github/workflows/**' 
   workflow_dispatch:
     inputs:
       terraform_action:
