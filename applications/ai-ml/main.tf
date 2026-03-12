@@ -109,7 +109,8 @@ module "aiml_landing_zone" {
   # This will be used as BYOR for AI Foundry
   genai_storage_account_definition = {
     name                      = "staiml${var.environment}${var.location_short}datagrokr"
-    shared_access_key_enabled = true
+    shared_access_key_enabled       = false
+    default_to_oauth_authentication = true
 
     endpoints = {
       blob = {
@@ -198,6 +199,8 @@ module "aiml_landing_zone" {
 
     storage_account_definition = {
       this = {
+        shared_access_key_enabled       = false   
+        default_to_oauth_authentication = true
         endpoints = {
           blob = {
             private_dns_zone_resource_id = local.private_dns_zones_existing.storage_blob_zone.resource_id
