@@ -21,8 +21,8 @@ locals {
   # Hub networking from platform
   hub_vnet_resource_id          = data.terraform_remote_state.platform.outputs.hub_and_spoke_vnet_virtual_network_resource_ids["primary"]
   hub_and_spoke_vnet_firewall_resource_names = try(data.terraform_remote_state.platform.outputs.hub_and_spoke_vnet_firewall_resource_names["primary"], null)
-  hub_resource_group_name       = data.terraform_remote_state.platform.outputs.templated_inputs.connectivity_resource_groups.vnet_primary.name
-  hub_dns_resource_group_name   = data.terraform_remote_state.platform.outputs.templated_inputs.connectivity_resource_groups.dns.name
+  hub_resource_group_name       = data.terraform_remote_state.platform.outputs.templated_inputs.connectivity_resource_groups[var.location].name
+  hub_dns_resource_group_name   = data.terraform_remote_state.platform.outputs.templated_inputs.connectivity_resource_groups[var.location].name
   firewall_private_ip           = try(data.terraform_remote_state.platform.outputs.hub_and_spoke_vnet_firewall_private_ip_address["primary"], null)
   hub_log_analytics_workspace_id = try(data.terraform_remote_state.platform.outputs.hub_log_analytics_workspace_id, null)
 }
